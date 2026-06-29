@@ -14,3 +14,13 @@ onBtn.addEventListener('click', () => {
 offBtn.addEventListener("click", () => {
     image.src = "images/pic_bulboff.gif";
 });
+
+document.getElementById("h3").innerHTML = "My World is not perfect";
+
+document.getElementById("text").innerText = "Now is the time";
+
+alert("Do not proceed");
+
+console.log("Output a message to cnsole");
+
+print("Holy Trinity, We are one");
