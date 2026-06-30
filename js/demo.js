@@ -21,6 +21,12 @@ document.getElementById("text").innerText = "Now is the time";
 
 alert("Do not proceed");
 
-console.log("Output a message to cnsole");
+console.log("Output a message to console");
 
 print("Holy Trinity, We are one");
+
+// demo-2.html script
+console.log("Hello World");
+console.log(typeof "Peter");
+console.log(typeof 42);
+console.log(typeof true);
