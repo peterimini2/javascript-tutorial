@@ -23,10 +23,11 @@ alert("Do not proceed");
 
 console.log("Output a message to console");
 
-print("Holy Trinity, We are one");
+let bank = "uba"
 
-// demo-2.html script
-console.log("Hello World");
-console.log(typeof "Peter");
-console.log(typeof 42);
-console.log(typeof true);
+let loan = "htc"
+
+let relationship = "peter"
+
+document.getElementById("demo1").innerHTML = "peter"
+
