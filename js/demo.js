@@ -19,15 +19,31 @@ document.getElementById("h3").innerHTML = "My World is not perfect";
 
 document.getElementById("text").innerText = "Now is the time";
 
-alert("Do not proceed");
+alert("Welcome!");
 
 console.log("Output a message to console");
 
-let bank = "uba"
-
-let loan = "htc"
-
-let relationship = "peter"
-
 document.getElementById("demo1").innerHTML = "peter"
+
+let a = 4;
+let x = (2 * 3) + a;
+document.getElementById("demo-3").innerHTML = x;
+
+let number1 = 45;
+let number2 = 54;
+let result = number1 > number2;
+document.getElementById("demo-4").innerHTML = "is 45 less than 54? " + result;
+
+function myFunction() {
+  let eligible;
+  let age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    eligible = "Input is not a number";
+  } else {
+    eligible = (age < 18) ? "Too younng" : "Old enough";
+  }
+
+  document.getElementById("demo-5").innerHTML = eligible + " to vote";
+}
+
 
