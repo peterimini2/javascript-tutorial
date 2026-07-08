@@ -42,8 +42,25 @@ function myFunction() {
   } else {
     eligible = (age < 18) ? "Too younng" : "Old enough";
   }
-
   document.getElementById("demo-5").innerHTML = eligible + " to vote";
 }
 
+// Loops
+const food = ["Rice", "Beans", "Yam", "Egg", "Meat"];
 
+// let text = "";
+// for (let i = 0; i < food.length; i++) {
+//   text += food[i] + "<br>";
+// }
+// document.getElementById("demo-6").innerHTML = text;
+
+// While loop
+let text = "";
+let i = 0;
+while (i < 10) {
+  text += "Countdown " + i + "<br>";
+  i++;
+}
+
+let 
+document.getElementById("demo-7").innerHTML = text;

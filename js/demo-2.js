@@ -90,12 +90,29 @@
 //   console.log(myNumber);
 // } //Don't create an endless loop
 
-for (let i = 0; i <= 10; i++) {
-  console.log(i);
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// let x = 10;
+// let y = 500;
+// let z = x + y;
+// console.log(z)
+
+// for (let i = 1; i <= 5; i++) {
+//   console.log("Example " + i)
+// }
+
+let battery = 100;
+while (battery > 0) {
+  console.log("Phone is off");
+  battery -= 20;
 }
 
-let x = 10;
-let y = 500;
-let z = x + y;
-console.log(z)
+// funtions
 
+const toProperCase = (name) => {
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+};
+
+console.log(toProperCase("pEtER"));
