@@ -109,6 +109,7 @@ while (battery > 0) {
   battery -= 20;
 }
 
+
 // funtions
 
 const toProperCase = (name) => {
@@ -116,3 +117,16 @@ const toProperCase = (name) => {
 };
 
 console.log(toProperCase("pEtER"));
+
+//Arrays
+
+const people = ["Man", "Woman", "Boy", "Girl"];
+people[1] = "Child"; //To change an array element to another
+// let myList = people.toString();// To change array to string
+let myList = JSON.stringify(people);
+console.log(myList);
+
+people.push("Elder") // add an array element
+people.pop(); // remove the last element in an array
+people.shift();
+console.log(people);

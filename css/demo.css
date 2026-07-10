@@ -4,3 +4,9 @@ button {
   border: none;
   background-color: rgb(119, 60, 175);
 }
+
+#greet {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
