@@ -193,59 +193,109 @@
 // const myPhoneString = JSON.stringify(myPhone);
 // console.log(myPhoneString);
 
-//DOM - Document Object Model
-const view1 = document.getElementById("view1");
-console.log(view1);
+// //DOM - Document Object Model
+// const view1 = document.getElementById("view1");
+// console.log(view1);
 
-const view2 = document.querySelector("#view2");
-console.log(view2);
+// const view2 = document.querySelector("#view2");
+// console.log(view2);
 
-const views = document.getElementsByClassName("view");
-console.log(views);
-const sameViews = document.querySelectorAll('.view');
-console.log(sameViews);
+// const views = document.getElementsByClassName("view");
+// console.log(views);
+// const sameViews = document.querySelectorAll('.view');
+// console.log(sameViews);
 
-const divs = view1.querySelectorAll("div");
-console.log(divs);
-const sameDivs = view1.getElementsByTagName("div");
-console.log(sameDivs);
+// const divs = view1.querySelectorAll("div");
+// console.log(divs);
+// const sameDivs = view1.getElementsByTagName("div");
+// console.log(sameDivs);
 
-const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
-console.log(evenDivs);
-for (let i = 0; i < evenDivs.length; i++) {
-  evenDivs[i].style.backgroundColor = "purple";
-}
+// const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
+// console.log(evenDivs);
+// for (let i = 0; i < evenDivs.length; i++) {
+//   evenDivs[i].style.backgroundColor = "purple";
+// }
 
-const navText = document.querySelector("nav h1");
-console.log(navText);
-navText.textContent = "Hello World";
-const navbar = document.querySelector("nav");
-navbar.innerHTML = `<h1>Welcome</h1> <p>This is from Javascript</p>`;
-console.log(navbar);
+// const navText = document.querySelector("nav h1");
+// console.log(navText);
+// navText.textContent = "Hello World";
+// const navbar = document.querySelector("nav");
+// navbar.innerHTML = `<h1>Welcome</h1> <p>This is from Javascript</p>`;
+// console.log(navbar);
 
-view1.style.display = "none"; // Display in webpage
-view2.style.display = "flex"; // Display in webpage
-view2.style.flexDirection = "wrap";
-view2.style.flexWrapStyle = "wrap";
-view2.style.margin = "10px";
+// view1.style.display = "none"; // Display in webpage
+// view2.style.display = "flex"; // Display in webpage
+// view2.style.flexDirection = "wrap";
+// view2.style.flexWrapStyle = "wrap";
+// view2.style.margin = "10px";
 
-while (view2.lastChild) {
-  view2.lastChild.remove();
-}
+// while (view2.lastChild) {
+//   view2.lastChild.remove();
+// }
 
-const createDivs = (parent, iter) => {
-  const newDiv = document.createElement("div");
-  newDiv.textContent = iter;
-  newDiv.style.backgroundColor = "#000";
-  newDiv.style.width = "100px";
-  newDiv.style.height = "100px";
-  newDiv.style.margin = "10px";
-  newDiv.style.display = "flex";
-  newDiv.style.justifyContent = "center";
-  newDiv.style.alignItems = "center";
-  parent.append(newDiv);
-}
-//createDivs(view2, 10);
-for (let i = 1; i <= 12; i++) {
-  createDivs(view2, i);
-}
+// const createDivs = (parent, iter) => {
+//   const newDiv = document.createElement("div");
+//   newDiv.textContent = iter;
+//   newDiv.style.backgroundColor = "#000";
+//   newDiv.style.width = "100px";
+//   newDiv.style.height = "100px";
+//   newDiv.style.margin = "10px";
+//   newDiv.style.display = "flex";
+//   newDiv.style.justifyContent = "center";
+//   newDiv.style.alignItems = "center";
+//   parent.append(newDiv);
+// }
+// //createDivs(view2, 10);
+// for (let i = 1; i <= 12; i++) {
+//   createDivs(view2, i);
+// }
+
+view2.style.display = "flex";
+
+//Event Listeners
+const view = document.querySelector("#view2");
+const div = view.querySelector("div");
+const h2 = div.querySelector("h2");
+
+//Syntax addEVentListener("event, function, useCapture")
+// const doSomething = () => {
+//   alert("Hey");
+// }
+
+// h2.addEventListener("click", doSomething, false);
+// h2.removeEventListener("click", doSomething, false);
+
+// h2.addEventListener("click", (event) => {
+//   console.log(event.target);
+//   event.target.textContent = "Clicked"
+// });
+
+document.addEventListener("readystatechange", (event) => {
+  if (event.target.readyState === "complete") {
+    console.log("readyState: complete");
+    initApp();
+  }
+});
+
+const initApp = () => {
+  const view = document.querySelector("#view2");
+  const div = view.querySelector("div");
+  const h2 = div.querySelector("h2");
+
+  view.addEventListener("click", (event) => {
+    view.classList.toggle("black");
+    view.classList.toggle("darkblue");
+  });
+
+  div.addEventListener("click", (event) => {
+   div.classList.toggle("blue");
+   div.classList.toggle("red");
+  });
+
+  h2.addEventListener("click", (event) => {
+    const myText = event.target.textContent;
+    myText === "My 2nd View"
+      ? (event.target.textContent = "Hello")
+      : (event.target.textContent = "My 2nd View");
+  });
+};
