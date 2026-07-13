@@ -103,30 +103,111 @@
 //   console.log("Example " + i)
 // }
 
-let battery = 100;
-while (battery > 0) {
-  console.log("Phone is off");
-  battery -= 20;
-}
+// let battery = 100;
+// while (battery > 0) {
+//   console.log("Phone is off");
+//   battery -= 20;
+// }
 
 
-// funtions
+// // funtions
 
-const toProperCase = (name) => {
-  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-};
+// const toProperCase = (name) => {
+//   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+// };
 
-console.log(toProperCase("pEtER"));
+// console.log(toProperCase("pEtER"));
 
-//Arrays
+// //Arrays
+// const people = ["Man", "Woman", "Boy", "Girl"];
+// people[1] = "Child"; //To change an array element to another
+// // let myList = people.toString();// To change array to string
+// let myList = JSON.stringify(people);
+// console.log(myList);
 
-const people = ["Man", "Woman", "Boy", "Girl"];
-people[1] = "Child"; //To change an array element to another
-// let myList = people.toString();// To change array to string
-let myList = JSON.stringify(people);
-console.log(myList);
+// people.push("Elder") // add an array element
+// //people.pop(); // remove the last element in an array
+// //people.shift(); //remove the first element in an array
+// let position = people.indexOf("Boy");
+// console.log("Boy is found in position " + position);
 
-people.push("Elder") // add an array element
-people.pop(); // remove the last element in an array
-people.shift();
-console.log(people);
+// //Objects
+// const person = {
+//   firstName: "Peter",
+//   lastName: "Imini",
+//   age: 24,
+//   location: "Warri",
+//   fullName: function () {
+//     return (this.firstName + " " + this.lastName).toUpperCase();
+//   }
+// };// Object method
+// console.log("Hello, " + person.firstName + " " + person.lastName + "." + " Welcome to " + person.location);
+// console.log(person.fullName());
+
+// //object constructor
+// function Family(first, last, age, location) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.location = location;
+// }
+// //Create new person
+// const myDad = new Family("Amos", "Imini", 61, "Warri");
+// const myMom = new Family("Victoria", "Imini", 54, "Warri");
+
+// console.log("My dad and mom, " + myDad.firstName + " and " + myMom.firstName + " " + myDad.lastName + ", stay in " + myDad.location + ".");
+
+// //Class
+// class phone {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//   }
+//   age(x) { //Year
+//     return x - this.year;
+//   }
+// }
+// const date = new Date();
+// let year = date.getFullYear();
+
+// const myPhone1 = new phone("Infinix", 2025);
+// const myPhone2 = new phone("Tecno", 2024);
+
+// console.log(`My first phone is ${myPhone1.name}`);
+// console.log("My " + myPhone2.name + " phone is " + myPhone2.age(year) + " years old.");
+
+// //JSON
+// const text = '{"name": "Peter", "age":24, "city": "Warri"}'
+// const myDataObj = JSON.parse(text); //String to object
+// console.log(myDataObj);
+// const myDataString = JSON.stringify(myDataObj); //Object to String
+// console.log(myDataString);
+
+// //Object to String
+// const myPhone = {
+//   name: "Tecno",
+//   year: 2012,
+//   country: "USA"
+// };
+// console.log(myPhone);
+// const myPhoneString = JSON.stringify(myPhone);
+// console.log(myPhoneString);
+
+//DOM - Document Object Model
+const view1 = document.getElementById("view1");
+console.log(view1);
+
+const view2 = document.querySelector("#view2");
+console.log(view2);
+view1.style.display = "flex"; // Display in webpage
+view2.style.display = "flex"; // Display in webpage
+
+const views = document.getElementsByClassName("view");
+console.log(views);
+const sameViews = document.querySelectorAll('.view');
+console.log(sameViews);
+
+const divs = view1.querySelectorAll("div");
+console.log(divs);
+const sameDivs = view1.getElementsByTagName("div");
+console.log(sameDivs);
