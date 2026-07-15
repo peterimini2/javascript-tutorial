@@ -270,49 +270,57 @@ const h2 = div.querySelector("h2");
 //   event.target.textContent = "Clicked"
 // });
 
-document.addEventListener("readystatechange", (event) => {
-  if (event.target.readyState === "complete") {
-    console.log("readyState: complete");
-    initApp();
-  }
-});
+// document.addEventListener("readystatechange", (event) => {
+//   if (event.target.readyState === "complete") {
+//     console.log("readyState: complete");
+//     initApp();
+//   }
+// });
 
-const initApp = () => {
-  const view = document.querySelector("#view2");
-  const div = view.querySelector("div");
-  const h2 = div.querySelector("h2");
+// const initApp = () => {
+//   const view = document.querySelector("#view2");
+//   const div = view.querySelector("div");
+//   const h2 = div.querySelector("h2");
 
-  view.addEventListener("click", (event) => {
-    view.classList.toggle("black");
-    view.classList.toggle("darkblue");
-  });
+//   view.addEventListener("click", (event) => {
+//     view.classList.toggle("black");
+//     view.classList.toggle("darkblue");
+//   });
 
-  div.addEventListener("click", (event) => {
-   div.classList.toggle("blue");
-   div.classList.toggle("red");
-  });
+//   div.addEventListener("click", (event) => {
+//    div.classList.toggle("blue");
+//    div.classList.toggle("red");
+//   });
 
-  h2.addEventListener("click", (event) => {
-    const myText = event.target.textContent;
-    myText === "My 2nd View"
-      ? (event.target.textContent = "Hello")
-      : (event.target.textContent = "My 2nd View");
-  });
-};
+//   h2.addEventListener("click", (event) => {
+//     const myText = event.target.textContent;
+//     myText === "My 2nd View"
+//       ? (event.target.textContent = "Hello")
+//       : (event.target.textContent = "My 2nd View");
+//   });
+// };
 
-//Web Storage API
-const myArray = ["eat", "read", "code"];
-const myObject = {
-  name: "Peter",
-  hobbies: ["eat", "read", "code"],
-  logName: function () {
-    console.log(this.name);
-  }
-};
+// //Web Storage API
+// const myArray = ["eat", "read", "code"];
+// const myObject = {
+//   name: "Peter",
+//   hobbies: ["eat", "read", "code"],
+//   logName: function () {
+//     console.log(this.name);
+//   }
+// };
 
 
 
-localStorage.setItem("mySessionStore", JSON.stringify(myArray));
-localStorage.clear(); //To clear whole storage
-const mySessionData = JSON.parse(localStorage.getItem("mySessionStore"));
-console.log(mySessionData);
+// localStorage.setItem("mySessionStore", JSON.stringify(myArray));
+// //localStorage.clear(); //To clear whole storage
+// const mySessionData = JSON.parse(localStorage.getItem("mySessionStore"));
+// console.log(mySessionData);
+
+// //Modules
+// import driveCar from "./cars.js";
+// import { drifting, parking } from "./cars.js";
+
+// console.log(driveCar());
+// console.log(parking());
+// console.log(drifting());
