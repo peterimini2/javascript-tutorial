@@ -299,3 +299,20 @@ const initApp = () => {
       : (event.target.textContent = "My 2nd View");
   });
 };
+
+//Web Storage API
+const myArray = ["eat", "read", "code"];
+const myObject = {
+  name: "Peter",
+  hobbies: ["eat", "read", "code"],
+  logName: function () {
+    console.log(this.name);
+  }
+};
+
+
+
+localStorage.setItem("mySessionStore", JSON.stringify(myArray));
+localStorage.clear(); //To clear whole storage
+const mySessionData = JSON.parse(localStorage.getItem("mySessionStore"));
+console.log(mySessionData);
